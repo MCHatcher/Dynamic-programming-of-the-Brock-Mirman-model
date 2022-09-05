@@ -131,7 +131,7 @@ for i = 2:T
 iz = 1;    
 r = rand; % draw random number from uniform distribution on (0,1) 
         for j=1:nz
-            if j==1 && r<PI(simiZ(i-1),1)
+            if j==1 && r<=PI(simiZ(i-1),1)
                 iz = 1;
             end
             if j>1 && r > sum(PI(simiZ(i-1),1:j-1)) && r <= sum(PI(simiZ(i-1),1:j))
